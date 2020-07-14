@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dijkstra's Greedy algorithm</title>
+        <style>
+            body {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            #superContainer {
+            }
+            #container {
+                background-color: gray;
+                width: 600px;
+                height: 600px;
+                display: block;
+            }
+            #legend {
+                min-width: 300px;
+            }
+            ul {
+                list-style-type: none;
+            }
+            li {
+                display: list-item;
+            }
+            li::marker {
+                display: none;
+            }
+            div.node {
+                border: 1px solid black;
+                border-radius: 5px;
+                width: 10px;
+                height: 10px;
+                display: inline-block;
+                margin-right: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="superContainer">
+            <div id="container"></div>
+        </div>
+        <div id="legend">
+            <ul>
+                <li><div class="node" style="background-color: white;"></div><span>White is unvisited, uncosted.</span></li>
+                <li><div class="node" style="background-color: lightblue;"></div><span>Blue is visited and appraised for cost, but not a final cost</span></li>
+                <li><div class="node" style="background-color: green;"></div><span>Green is being evaluated right now for cost, will be blue afterward</span></li>
+                <li><div class="node" style="background-color: pink;"></div><span>Pink is part of the Shortest Path tree with final route cost</span></li>
+            </ul>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js" integrity="sha512-FHsFVKQ/T1KWJDGSbrUhTJyS1ph3eRrxI228ND0EGaEp6v4a/vGwPWd3Dtd/+9cI7ccofZvl/wulICEurHN1pg==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-force/1.1.0/d3-force.min.js" integrity="sha512-jlwjRbyfukG1ByOWFIcM6p06+S5q5nPHmGfS+Pygy2w+xtQ5uJwDYP4dJ9nph5fal0e/wcpR553eYuan3/a3hQ==" crossorigin="anonymous"></script>
+        <script src="js/permutation.js"></script>
+        <script src="js/lineIntersectTest.js"></script>
+        <script src="js/dijkstrasShortestPathD3Graph.js"></script>
+        <script src="js/dijkstrasShortestPathGreedy.js"></script>
+    </body>
+</html>
